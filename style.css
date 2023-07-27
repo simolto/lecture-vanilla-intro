@@ -1,0 +1,118 @@
+:root {
+  /* color */
+  --color-black: #3f454d;
+  --color-white: #ffffff;
+  --color-blue: #3b88c3;
+  --color-yellow: #fbbe28;
+  --color-pink: #fd7f84;
+  --color-light-grey: #dfdfdf;
+
+  /* size */
+  --base-space: 0.5rem;
+  --size-button: 3.75rem;
+  --size-border: 0.25rem;
+  --size-items: 40rem;
+  --size-thumbnail: 3.125rem;
+  --font-size: 1.125rem;
+
+  /* animation */
+  --animation-duration: 300ms;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--color-black);
+}
+
+.logo,
+.btn {
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+}
+
+.logo:hover,
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  margin-right: var(--base-space);
+  border: none;
+  background-color: transparent;
+}
+
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorBtn {
+  padding: var(--base-space);
+  border-radius: var(--size-border);
+  font-size: var(--font-size);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+.items {
+  list-style: none;
+  overflow-y: scroll;
+  width: var(--size-items);
+  height: 25rem;
+  padding-left: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+  border-radius: var(--size-border);
+  background-color: var(--color-white);
+}
+
+.item.blur {
+  opacity: 0.5;
+}
+
+.item__thumbnail {
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+}
+
+.item__description {
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    /* size */
+    --base-space: 0.25rem;
+    --size-button: 2.5rem;
+    --size-border: 0.125rem;
+    --size-items: 22rem;
+    --size-thumbnail: 2rem;
+    --font-size: 0.875rem;
+  }
+}
